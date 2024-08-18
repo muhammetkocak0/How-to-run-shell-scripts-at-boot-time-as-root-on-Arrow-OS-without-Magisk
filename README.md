@@ -9,8 +9,9 @@ on boot
 
 ## Step 2 
 create /system/etc/myscript.sh, write your script and make it executable.
-Note: the first line of the script must be #!/bin/sh.
-Note: If you want to use iptables in this script (or some other external binary), use full path (/system/bin/iptables) instead of just iptables. The /system/bin directory seems to be missing from the $PATH when the script is launched.
+
+### Note: the first line of the script must be #!/bin/sh.
+### Note: If you want to use iptables in this script (or some other external binary), use full path (/system/bin/iptables) instead of just iptables. The /system/bin directory seems to be missing from the $PATH when the script is launched.
 
 ## Step 3  
 open the /system/addon.d/50-arrow.sh file, find the list_files function and add paths to files you've just created 
