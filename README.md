@@ -11,6 +11,7 @@ on boot
 ### create /system/etc/myscript.sh, write your script and make it executable.
 
  Note: the first line of the script must be #!/bin/sh.
+ 
  Note: If you want to use iptables in this script (or some other external binary), use full path (/system/bin/iptables) instead of just iptables. The /system/bin directory seems to be missing from the $PATH when the script is launched.
 
 ## Step 3  
