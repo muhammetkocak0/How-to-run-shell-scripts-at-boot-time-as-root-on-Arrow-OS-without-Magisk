@@ -3,15 +3,21 @@
 ## Step 1 
 ### go to /system/etc/init and create a file named myscript.rc with following content:
 ```c
+service myscript /system/bin/sh /system/etc/myscript.sh
+    class main
+    user root
+    group root
+    seclabel u:r:su:s0
+
 on boot
-    exec u:r:su:s0 root root -- /system/etc/myscript.sh
+    start myscript
 ```
+Note: .rc file must has authorization number 644
 
 ## Step 2 
 ### create /system/etc/myscript.sh, write your script and make it executable.
 
  Note: the first line of the script must be #!/bin/sh.
- 
  Note: If you want to use iptables in this script (or some other external binary), use full path (/system/bin/iptables) instead of just iptables. The /system/bin directory seems to be missing from the $PATH when the script is launched.
 
 ## Step 3  
