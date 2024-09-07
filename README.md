@@ -1,4 +1,4 @@
-# How to run shell scripts at boot time as root on Arrow OS without Magisk
+# How to run shell scripts at boot time as root on Custom Roms(Arrow OS, LineageOS, Pixel Experience, Paranoid Android, GrapheneOS, Evolution X etc.) without Magisk
 
 ## Step 1 
 ### go to /system/etc/init and create a file named myscript.rc with following content:
